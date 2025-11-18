@@ -16,4 +16,4 @@ aws s3api create-bucket --bucket tomcatbuckt123 --region us-east-1
 aws s3api put-bucket-versioning --bucket tomcatbuckt123 --region us-east-1 --versioning-configuration Status=Enabled
 export KOPS_STATE_STORE=s3://tomcatbuckt123
 kops create cluster --name rahamss.k8s.local --zones us-east-1 --control-plane-image ami-0f918f7e67a3323f0 --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-0f918f7e67a3323f0 --node-count=2 --node-size c7i-flex.large
-kops update cluster --name rahams.k8s.local --yes --admin
+kops update cluster --name rahamss.k8s.local --yes --admin
